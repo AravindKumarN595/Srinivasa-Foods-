@@ -18,16 +18,3 @@ function updateCart() {
 
     document.getElementById("total").innerText = total;
 }
-
-function addReview() {
-    let name = document.getElementById("name").value;
-    let text = document.getElementById("reviewText").value;
-
-    if(name && text) {
-        document.getElementById("reviews").innerHTML += 
-        `<p><strong>${name}:</strong> ${text}</p>`;
-
-        document.getElementById("name").value = "";
-        document.getElementById("reviewText").value = "";
-    }
-}
