@@ -9,11 +9,25 @@
 <body>
 
 <header>
-    <h1>Srinivas Foods</h1>
-    <p>Fresh • Hygienic • Affordable Veg Delights</p>
+    <div class="logo">Srinivas Foods</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Review</a>
+        <a href="#cart">Cart</a>
+        <a href="#login" class="login-btn">Log In</a>
+    </nav>
 </header>
 
-<section class="offers">
+<section id="about" class="hero fade-in">
+    <div class="hero-content">
+        <h1>Fresh • Hygienic • Affordable Veg Delights</h1>
+        <p>Premium vegetarian dishes prepared with quality ingredients at market-friendly prices.</p>
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d" alt="Veg Food" class="hero-img">
+    </div>
+</section>
+
+<section class="offers glass fade-in">
     <h2>🔥 Special Launch Offers</h2>
     <ul>
         <li>20% OFF on First Order</li>
@@ -22,57 +36,46 @@
     </ul>
 </section>
 
-<section>
-    <h2>📊 Market Veg Prices (Approx.)</h2>
-    <table>
-        <tr><th>Item</th><th>Price per Kg</th></tr>
-        <tr><td>Paneer</td><td>₹320</td></tr>
-        <tr><td>Rice</td><td>₹60</td></tr>
-        <tr><td>Mushroom</td><td>₹220</td></tr>
-        <tr><td>Gobi</td><td>₹40</td></tr>
-    </table>
-</section>
-
-<section class="menu">
+<section id="menu" class="fade-in">
     <h2>🍽 Our Dishes</h2>
-    <div class="item">
+
+    <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7" alt="Paneer">
         <h3>Paneer Masala - ₹320</h3>
         <input type="number" min="1" value="1" id="paneerQty">
         <button onclick="addToCart('Paneer Masala',320,'paneerQty')">Add to Cart</button>
     </div>
-    <div class="item">
+
+    <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1604908812427-4a1a4c3b5c7b" alt="Fried Rice">
         <h3>Veg Fried Rice - ₹160</h3>
         <input type="number" min="1" value="1" id="riceQty">
         <button onclick="addToCart('Veg Fried Rice',160,'riceQty')">Add to Cart</button>
     </div>
-    <div class="item">
+
+    <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc" alt="Mushroom">
         <h3>Mushroom Masala - ₹220</h3>
         <input type="number" min="1" value="1" id="mushroomQty">
         <button onclick="addToCart('Mushroom Masala',220,'mushroomQty')">Add to Cart</button>
     </div>
-    <div class="item">
+
+    <div class="card glass">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Gobi">
         <h3>Gobi Manchurian - ₹180</h3>
         <input type="number" min="1" value="1" id="gobiQty">
         <button onclick="addToCart('Gobi Manchurian',180,'gobiQty')">Add to Cart</button>
     </div>
 </section>
 
-<section class="cart">
+<section id="cart" class="cart glass fade-in">
     <h2>🛒 Cart</h2>
     <div id="cartItems"></div>
     <h3>Total: ₹<span id="total">0</span></h3>
     <button onclick="showPayment()">Proceed to Payment</button>
 </section>
 
-<section id="payment" class="payment hidden">
-    <h2>💳 Payment</h2>
-    <input type="text" placeholder="Card Number">
-    <input type="text" placeholder="Expiry Date">
-    <input type="text" placeholder="CVV">
-    <button onclick="alert('Payment Successful!')">Pay Now</button>
-</section>
-
-<section class="reviews">
+<section id="reviews" class="reviews glass fade-in">
     <h2>⭐ Customer Reviews</h2>
     <div id="reviewList"></div>
     <input type="text" id="reviewName" placeholder="Your Name">
@@ -80,10 +83,11 @@
     <button onclick="addReview()">Submit Review</button>
 </section>
 
-<section class="location">
-    <h2>📍 Location</h2>
-    <p>Angondhalli, Karnataka, India</p>
-    <p>Open: 10 AM – 10 PM</p>
+<section id="login" class="glass fade-in">
+    <h2>🔐 Log In</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
 </section>
 
 <script src="script.js"></script>
