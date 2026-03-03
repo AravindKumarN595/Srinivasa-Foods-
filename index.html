@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Srinivasam Foods</title>
+    <title>Srinivas Foods</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Top Blue Bar -->
 <div class="top-bar">
-    House of Exclusive Indian Veg Cuisine | Premium Vegetarian | Home foods
+    House of Exclusive Indian Veg Cuisine | Premium Vegetarian Restaurant
 </div>
 
-<!-- Navigation -->
 <header>
     <div class="logo">Srinivas Foods</div>
     <nav>
@@ -25,45 +23,46 @@
     <button class="order-btn">Order Online</button>
 </header>
 
-<!-- Hero Section -->
 <section class="hero">
-    <div class="hero-text">
+
+    <!-- Left Text -->
+    <div class="hero-left">
         <h1>Authentic South Indian Delights</h1>
         <p>Experience Traditional Taste with Premium Quality</p>
         <button class="hero-btn">Explore Menu</button>
     </div>
-</section>
 
-<!-- Menu Section -->
-<section class="menu-section">
+    <!-- Right Menu -->
+    <div class="hero-right">
 
-    <h2>🍽 Our Special Menu</h2>
+        <h2>🍽 Our Special Menu</h2>
 
-    <div class="menu-card">
-        <p>Paneer Butter Masala - ₹320</p>
-        <input type="number" id="p1" value="1" min="1">
-        <button onclick="addToCart('Paneer Butter Masala',320,'p1')">Add</button>
+        <div class="menu-card">
+            <p>Paneer Butter Masala - ₹320</p>
+            <input type="number" id="p1" value="1" min="1">
+            <button onclick="addToCart('Paneer Butter Masala',320,'p1')">Add</button>
+        </div>
+
+        <div class="menu-card">
+            <p>Veg Fried Rice - ₹160</p>
+            <input type="number" id="p2" value="1" min="1">
+            <button onclick="addToCart('Veg Fried Rice',160,'p2')">Add</button>
+        </div>
+
+        <div class="menu-card">
+            <p>Mushroom Masala - ₹220</p>
+            <input type="number" id="p3" value="1" min="1">
+            <button onclick="addToCart('Mushroom Masala',220,'p3')">Add</button>
+        </div>
+
+        <div class="cart-box">
+            <h3>🛒 Cart</h3>
+            <div id="cartItems"></div>
+            <p>Total: ₹<span id="total">0</span></p>
+        </div>
+
     </div>
 
-    <div class="menu-card">
-        <p>Veg Fried Rice - ₹160</p>
-        <input type="number" id="p2" value="1" min="1">
-        <button onclick="addToCart('Veg Fried Rice',160,'p2')">Add</button>
-    </div>
-
-    <div class="menu-card">
-        <p>Mushroom Masala - ₹220</p>
-        <input type="number" id="p3" value="1" min="1">
-        <button onclick="addToCart('Mushroom Masala',220,'p3')">Add</button>
-    </div>
-
-</section>
-
-<!-- Cart Section -->
-<section class="cart-section">
-    <h2>🛒 Cart</h2>
-    <div id="cartItems"></div>
-    <h3>Total: ₹<span id="total">0</span></h3>
 </section>
 
 <script src="script.js"></script>
