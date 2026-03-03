@@ -1,59 +1,114 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff6a00, #ffcc00);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Top bar */
+.top-bar {
+    background: #0d3b82;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #f7d774, #e6c25a);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px 40px;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
 
-h1 {
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #0d3b82;
+}
+
+.order-btn {
+    background: #0d3b82;
     color: white;
-    margin-bottom: 5px;
-}
-
-.tagline {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.item {
-    margin-bottom: 15px;
-}
-
-input, textarea {
-    width: 80%;
-    padding: 6px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-button {
-    padding: 6px 12px;
+    padding: 8px 15px;
     border: none;
-    background: #ff6a00;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #e65c00;
+.order-btn:hover {
+    background: #092c63;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #f7d774;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu Section */
+.menu-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.menu-card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.menu-card input {
+    width: 60%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.menu-card button {
+    padding: 5px 10px;
+    background: #0d3b82;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Cart */
+.cart-section {
+    text-align: center;
+    padding: 30px;
+    background: #f1f1f1;
 }
