@@ -29,8 +29,27 @@ function addReview() {
 
     if (name && text) {
         let reviewList = document.getElementById("reviewList");
-        reviewList.innerHTML += `<div><strong>${name}</strong><p>${text}</p></div>`;
+        reviewList.innerHTML += `<div class='card'><strong>${name}</strong><p>${text}</p></div>`;
         document.getElementById("reviewName").value = "";
         document.getElementById("reviewText").value = "";
     }
 }
+
+// Scroll animation
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
