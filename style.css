@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4fff6;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1e8e3e;
+    color: white;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #1e8e3e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+button {
+    background: #1e8e3e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #166c2d;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.offers ul {
+    padding-left: 20px;
+}
+
+.reviews div {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
