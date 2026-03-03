@@ -1,77 +1,128 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background: #f4fff6;
-    color: #222;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background: #1e8e3e;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e8e3e, #43a047, #66bb6a);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
     color: white;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-h2 {
-    color: #1e8e3e;
-}
-
-table {
+header {
+    position: fixed;
     width: 100%;
-    border-collapse: collapse;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    z-index: 1000;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
+header nav a:hover {
+    color: #ffd54f;
 }
 
-.item {
+.login-btn {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+section {
+    padding: 120px 60px 60px 60px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero-img {
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.glass {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.card {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
     margin-bottom: 15px;
 }
 
 button {
-    background: #1e8e3e;
-    color: white;
+    background: white;
+    color: #1e8e3e;
     border: none;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #166c2d;
+    transform: scale(1.05);
 }
 
 input, textarea {
     width: 100%;
     padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
 }
 
-.hidden {
-    display: none;
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
 }
 
-.offers ul {
-    padding-left: 20px;
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.reviews div {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
+@media (max-width: 768px) {
+    section {
+        padding: 120px 20px 40px 20px;
+    }
 }
