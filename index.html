@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinivas Foods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Srinivas Foods</h1>
+    <p>Fresh • Hygienic • Affordable Veg Delights</p>
+</header>
+
+<section class="offers">
+    <h2>🔥 Special Launch Offers</h2>
+    <ul>
+        <li>20% OFF on First Order</li>
+        <li>Buy 2 Get 1 Free on Veg Fried Rice</li>
+        <li>Free Delivery above ₹499</li>
+    </ul>
+</section>
+
+<section>
+    <h2>📊 Market Veg Prices (Approx.)</h2>
+    <table>
+        <tr><th>Item</th><th>Price per Kg</th></tr>
+        <tr><td>Paneer</td><td>₹320</td></tr>
+        <tr><td>Rice</td><td>₹60</td></tr>
+        <tr><td>Mushroom</td><td>₹220</td></tr>
+        <tr><td>Gobi</td><td>₹40</td></tr>
+    </table>
+</section>
+
+<section class="menu">
+    <h2>🍽 Our Dishes</h2>
+    <div class="item">
+        <h3>Paneer Masala - ₹320</h3>
+        <input type="number" min="1" value="1" id="paneerQty">
+        <button onclick="addToCart('Paneer Masala',320,'paneerQty')">Add to Cart</button>
+    </div>
+    <div class="item">
+        <h3>Veg Fried Rice - ₹160</h3>
+        <input type="number" min="1" value="1" id="riceQty">
+        <button onclick="addToCart('Veg Fried Rice',160,'riceQty')">Add to Cart</button>
+    </div>
+    <div class="item">
+        <h3>Mushroom Masala - ₹220</h3>
+        <input type="number" min="1" value="1" id="mushroomQty">
+        <button onclick="addToCart('Mushroom Masala',220,'mushroomQty')">Add to Cart</button>
+    </div>
+    <div class="item">
+        <h3>Gobi Manchurian - ₹180</h3>
+        <input type="number" min="1" value="1" id="gobiQty">
+        <button onclick="addToCart('Gobi Manchurian',180,'gobiQty')">Add to Cart</button>
+    </div>
+</section>
+
+<section class="cart">
+    <h2>🛒 Cart</h2>
+    <div id="cartItems"></div>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <button onclick="showPayment()">Proceed to Payment</button>
+</section>
+
+<section id="payment" class="payment hidden">
+    <h2>💳 Payment</h2>
+    <input type="text" placeholder="Card Number">
+    <input type="text" placeholder="Expiry Date">
+    <input type="text" placeholder="CVV">
+    <button onclick="alert('Payment Successful!')">Pay Now</button>
+</section>
+
+<section class="reviews">
+    <h2>⭐ Customer Reviews</h2>
+    <div id="reviewList"></div>
+    <input type="text" id="reviewName" placeholder="Your Name">
+    <textarea id="reviewText" placeholder="Write your review"></textarea>
+    <button onclick="addReview()">Submit Review</button>
+</section>
+
+<section class="location">
+    <h2>📍 Location</h2>
+    <p>Angondhalli, Karnataka, India</p>
+    <p>Open: 10 AM – 10 PM</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
